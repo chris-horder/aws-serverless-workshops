@@ -69,9 +69,9 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 
     ![CodeStar 6](images/codestar-6.png)
 
-1. The next screen asks how you will edit your project code.  You will come back to this configuration later in this module and can click the **Skip** button in the lower right corner of the browser window to proceed.
+1. The next screen asks how you will edit your project code.  Click `AWS Cloud9` and select **Next**
 
-    ![CodeStar 7](images/codestar-7.png)
+1. Leave as `t2.micro` and select **Next**
 
 1. The screen below is your CodeStar project dashboard.  After creating a new project, there will be a short delay as CodeStar provisions the resources for CodeCommit, CodeBuild, CodePipeline, and additional resources related to your project template, Lambda functions in this case.  When the progress bar in the upper right of the browser window reaches 100% complete, the provisioning phase of project creation is complete.
 
@@ -94,34 +94,38 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 </p></details>
 <p>
 
-Congratulations!  You have successfully create a serverless web service project using CodeStar.  In the next section, you will use a Git client to clone the repository to your workstation.
+Congratulations!  You have successfully create a serverless web service project using CodeStar.  In the next section, you will use a Cloud based IDE to view your code.
 
-## Clone CodeCommit Git Repository
+## Access Cloud9 Workstation
 
-**Goal:** From the CodeStar dashboard for the `uni-api` project, find the CodeCommit instructions to clone the Git repository to your local workstation.
+**Goal:** From the CodeStar dashboard for the `uni-api` project, find the `Start coding` button so you can start to modify your code.
 
 <details>
-<summary><strong>HOW TO clone the CodeCommit git repository (expand for details)</strong></summary><p>
+<summary><strong>HOW TO accees the Cloud9 IDE</strong></summary><p>
 
-1. In the upper right corner of the CodeStar project dashboard browser window, click the **Connect Tools** button.
+1. In the upper right corner there is a button `Start coding` click that and the Cloud9 IDE will open in a new tab
 
-    ![CodeStar 11](images/codestar-11.png)
-    
-    You can also click the **Connect** button in the bottom left corner of the **Commit history** project tile.
-    
-    ![CodeStar 11](images/codestar-11b.png)
-    
-1. You can select instructions to clone the CodeCommit respository using **Visual Studio**, **Eclipse**, or **Command line tools**.  Click **See instructions** for instructions for cloning to **macOS**, **Windows**, and **Linux** operating systems.  Complete the instructions to clone the CodeCommit Git repository to your local workstation.
+1. In there you will see a file tree, workspace/editor and a terminal shell. 
 
-    ![CodeStar 12](images/codestar-12.png)
+1. Inside the terminal shell type: 
+```sh
+cd uni-api/
+git pull
+```
+The output should be something like 
+```sh
+Already up to date
+```
+
+1. In the File Explorer click the uni-api folder and look at the file structure, you can see all the files required to deploy a serverless application
 
 </p></details>
 <p>
 
-Congratulations!  You have successfully cloned the `uni-api` project to your local workstation.  In future modules, you will use this local version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
+Congratulations!  You have successfully cloned the `uni-api` project to your Cloud9 workstation.  In future modules, you will use this version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
 
 
 
 ## Completion
 
-You have successfully created a CodeStar project, tested the sample REST API, and cloned the project Git repository to your workstation.  In the next [Serverless Application Model (SAM) Module](../1_ServerlessApplicationModel), you will learn more about SAM and how to use it test your API on your workstation.
+You have successfully created a CodeStar project, tested the sample REST API, and cloned the project Git repository to your Cloud IDE workstation.  In the next [Serverless Application Model (SAM) Module](../1_ServerlessApplicationModel), you will learn more about SAM and how to use it test your API on your workstation.
