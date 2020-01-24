@@ -256,6 +256,12 @@ In this section, you will use SAM CLI on your workstation to run the Unicorn API
    sam local start-api
    ```
    
+   If using Cloud9, run the following command:
+
+   ```bash
+   sam local start-api --port 8080
+   ```
+
    If port forwarding from an EC2 developer instance, run the following command:
 
    ```bash
@@ -268,6 +274,10 @@ In this section, you will use SAM CLI on your workstation to run the Unicorn API
 
    ![start-api output](images/start-api-output.png)
 
+### Cloud9 users
+1. If using Cloud9, click `Preview` at top of page and update the url in the preview pane to include `\unicorns` at the end
+
+### Desktop users
 1. Open a browser and enter `http://127.0.0.1:3000/unicorns` in the address bar.  Confirm that you see the output below:
 
    ![Hello World in Browser](images/browser-hello-world.png)
